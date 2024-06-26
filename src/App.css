@@ -1,0 +1,39 @@
+ /* Navbar */
+/* .small-logo {
+  width: 200px; 
+  height: auto; 
+  margin-top: -60px;
+  margin-left: 20px
+
+  
+  
+  ;
+} */
+ /* .nav-margin{
+  margin-top: -90px;
+  
+}  */
+
+/* .carousel img {
+  width: 100%;
+  height: auto; 
+  object-fit: cover; 
+  max-height: 400px; 
+}
+
+
+.bg-denim-texture {
+  background-image: url('/path/to/denim-texture.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+  */
+  @media (max-width: 360px) {
+    .object-cover {
+      margin: 0;
+      padding: 0;
+      object-fit: contain !important; /* Acesta este un exemplu de cod pe care-l poți folosi pentru a asigura că imaginea este afișată corect.*/
+    }
+  }
+  
