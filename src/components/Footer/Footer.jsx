@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-gray-800 to-red-800 bg-opacity-100 text-white">
@@ -8,10 +10,11 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1 lg:col-span-2 mb-8 md:mb-0">
             <h3 className="text-lg font-semibold mb-4">Links</h3>
             <div className="flex flex-col space-y-4">
-              <a href="/contact" className="hover:text-red-600">Contact</a>
-              <a href="/privacy" className="hover:text-red-600">Privacy Policy</a>
-              <a href="/terms" className="hover:text-red-600">Terms of Service</a>
-              <a href="/faq" className="hover:text-red-600">FAQ</a>
+            <Link to="/contact" className="hover:text-red-600">Contact</Link>
+            <Link to="/privacyPolicy#privacy-policy-top" className="hover:text-red-600">Privacy Policy</Link>
+
+            <Link to="/termsOfService" className="hover:text-red-600">Terms of Service</Link>
+
             </div>
           </div>
           

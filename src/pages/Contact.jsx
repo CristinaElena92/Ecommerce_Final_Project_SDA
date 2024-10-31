@@ -1,9 +1,24 @@
+import { useEffect, useState } from "react";
 
 const Contact = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleSignIn = () => {
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
   return (
-    <div className="container mx-auto px-4 py-8 flex flex-wrap items-start bg-gradient-to-r from-gray-800 to-gray-500 text-white">
-      {/* Lista SVG-urilor */}
-      <ul className="divide-y divide-gray-200 pr-8 w-full md:w-1/2 lg:w-1/4">
+    <div className="container mx-auto px-4 py-8 flex flex-wrap flex-col md:flex-row items-start bg-gradient-to-r from-gray-800 to-gray-500 text-white min-h-screen">
+      {/* SVG-uri */}
+      <ul className="divide-y divide-gray-200 w-full md:w-1/2 lg:w-1/4 md:pr-8">
         <li className="flex items-center py-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,6 +59,7 @@ const Contact = () => {
           <b className="font-bold text-sm md:text-base lg:text-sm">+39 02 4952 9367</b>
         </li>
       </ul>
+
       {/* Formularul */}
       <div className="w-full md:w-1/2 lg:w-2/3 mt-8 md:mt-0 md:ml-auto">
         <form className="max-w-md mx-auto">
@@ -67,12 +83,28 @@ const Contact = () => {
             ></textarea>
           </div>
           <button
-            type="submit"
-            className="w-full px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition duration-200"
+            className="bg-gradient-to-b from-red-600 to-red-700 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full border-2 border-white focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50"
+            type="button"
+            onClick={handleSignIn}
           >
             Submit
           </button>
         </form>
+         {/* Popup*/}
+         {showPopup && (
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="bg-white rounded-lg p-8 shadow-lg relative z-10">
+              <h3 className="text-black text-2xl mb-4 font-script">Thank you for the message</h3>
+              <button
+                className="bg-gradient-to-b from-red-600 to-red-700 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full border-2 border-white focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50"
+                onClick={closePopup}
+              >
+                Close
+              </button>
+            </div>
+            <div className="fixed inset-0 bg-black opacity-50 z-0" onClick={closePopup}></div>
+          </div>
+        )}
       </div>
 
       {/* Harta Google */}

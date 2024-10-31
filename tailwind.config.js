@@ -7,36 +7,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Culori principale
-        'blue-dark': '#1A365D',
-        'gray-dark': '#505050',
-        // Culori accent
-        'golden': '#FFD700',
-        'silver': '#C0C0C0',
-        // Alte culori
-        // 'navy': {
-        //   900: '#001f3f',
-        // },
-        // 'gray': {
-        //   800: '#2c3e50',
-        // },
-        // 'cerulean': {
-        //   600: '#007ba7',
-        // },
-        // 'gray': {
-        //   100: '#f7fafc',
-        //   700: '#4a5568',
-        // },
+       
       },
       fontFamily: {
         script: ['Dancing Script', 'cursive'],
       },
+      height: {
+        'screen-90': 'calc(100vh - 90px)',
+      },
+      transitionProperty: {
+        'opacity': 'opacity',
+      },
     },
   },
   screens: {
-    'xs': '360px',
-    'sm': '360px',
-    // alte dimensiuni de ecran...
+    
+    
+    
   },
   plugins: [],
 }

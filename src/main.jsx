@@ -7,9 +7,10 @@ import Home from './pages/Home.jsx'
 import AboutUs from './pages/AboutUs.jsx'
 import OurJeans from './pages/OurJeans.jsx'
 import Contact from './pages/Contact.jsx'
-import ShoppingBag from './components/PagesNav/ShoppingBag.jsx'
-import Favorites from './components/PagesNav/Favorites.jsx'
-import UserLog from './components/PagesNav/UserLog.jsx'
+
+import UserLog from './components/Navbar/UserLog.jsx'
+import PrivacyPolicy from './components/Footer/PrivacyPolicy.jsx'
+import TermsOfService from './components/Footer/TermsOfService.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,10 +19,9 @@ const router = createBrowserRouter(
 <Route path="/aboutUs"element={<AboutUs />}/>
 <Route path="/ourJeans"element={<OurJeans />}/>
 <Route path="/contact"element={<Contact />}/>
-<Route path="/shoppingBag" element={<ShoppingBag />} /> 
-<Route path="/favorites" element={<Favorites />} /> 
+<Route path="/privacyPolicy"element={<PrivacyPolicy />}/>
+<Route path="/termsOfService"element={<TermsOfService />}/>
 <Route path="/userLog" element={<UserLog/>} /> 
-
 </Route>
 ))
 

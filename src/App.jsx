@@ -6,7 +6,8 @@ import Footer from './components/Footer/Footer'
 import { createContext, useState } from 'react'
 
 
-// import { useSelector } from 'react-redux'
+
+
 //Obiect "products"
 const products = {
   categories: {
@@ -266,6 +267,7 @@ function App() {
           value={categories}
         >
           <Navbar />
+         
           <Outlet />
           <Footer />
         </ProductContext.Provider>
